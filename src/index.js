@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import ReactDOM from "react-dom";
+import Carousel from "./carousel.js";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import { Search, JournalCheck, Files } from 'react-bootstrap-icons';
@@ -14,7 +16,7 @@ function App() {
     return (
         <Router>
         <div style={{marginBottom: "20px"}}>
-            
+            <Carousel sendlanguage={language}/>
             <div id={"color-bars"}>
                 <div style={{backgroundColor: "#f68d2e" }}></div>
                 <div style={{backgroundColor: "#41b6e6" }}></div>
