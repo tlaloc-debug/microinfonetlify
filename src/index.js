@@ -3,11 +3,18 @@ import ReactDOM from "react-dom";
 import Navigation from "./header.js";
 import Carousel from "./carousel.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import { Container, Row, Col } from 'react-bootstrap';
 import { Search, JournalCheck, Files } from 'react-bootstrap-icons';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import Home from "./home.js";
 import "./index.css";
+
+
+
+
+
+
+
 
 
 function App() {
@@ -99,7 +106,7 @@ function App() {
 
 
         <Switch>
-            
+            <Route exact path="/"><Home sendlanguage={language}/></Route >
         </Switch>
 
        
