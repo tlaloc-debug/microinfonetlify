@@ -1,0 +1,67 @@
+.logo {
+    width: 50px;
+    height: 50px;
+    background-image: url("./images/logo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.name {
+    display: inline-block;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2em;
+    position: absolute;
+    top: 20px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+#navigation > li {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 10px;
+    font-weight: bold;
+}
+
+.mobile_menu > li {
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+select {
+    border:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -ms-appearance: none; /* get rid of default appearance for IE8, 9 and 10*/
+    font-weight: bold;
+}
+
+.mobile_menu {display: none;}
+
+.desktop_menu {display: block;}
+
+#changeLanguage {
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+
+@media only screen and (max-width: 991px) {
+
+    .desktop_menu {display: none;}
+    
+    .mobile_menu {display: block;}
+
+    #logo-title {position: absolute;}
+
+    .name {top: 0;}
+
+    .changeLanguageDesktop {display: none;}
+
+    .allCharts {display: none;}
+
+}

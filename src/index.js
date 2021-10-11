@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import ReactDOM from "react-dom";
+import Navigation from "./header.js";
 import Carousel from "./carousel.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -16,6 +17,7 @@ function App() {
     return (
         <Router>
         <div style={{marginBottom: "20px"}}>
+            <Navigation handleSetLanguage={language => {setlanguage(language);}} sendlanguage={language}/>
             <Carousel sendlanguage={language}/>
             <div id={"color-bars"}>
                 <div style={{backgroundColor: "#f68d2e" }}></div>
