@@ -1,13 +1,58 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#color-bars {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin-bottom: 25px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#color-bars > div {
+    width: 33%;
+    height: 8px;
+}
+
+#search > .up {border-bottom: solid #f68d2e;}
+#glosary > .up {border-bottom: solid #41b6e6;}
+#compare > .up {border-bottom: solid #6cc24a;}
+
+.up {
+    height: 100px;
+    padding-top: 15px;
+}
+
+.down {
+    padding-top: 30px;
+    height: 60;
+    font-size: 1.5em;
+}
+
+#search > div, #glosary > div, #compare > div {
+    display: flex;
+    justify-content: center;
+    color: gray;
+    margin: 0px 30px;
+    
+}
+
+a:link {
+    text-decoration: none;
+  }
+
+#search > .down > div > span {color: #f68d2e;}
+#glosary > .down > div > span {color: #41b6e6;}
+#compare > .down > div > span {color: #6cc24a;}
+
+  @media only screen and (max-width: 991px) {
+
+    #color-bars {
+       display: none;
+    }
+ 
+    #search > div:first-of-type, #glosary > div:first-of-type, #compare > div:first-of-type  {
+        display: none;
+    }
+
+    #search > .down {border-bottom: solid #f68d2e;}
+    #glosary > .down {border-bottom: solid #41b6e6;}
+    #compare > .down {border-bottom: solid #6cc24a;}
 }
