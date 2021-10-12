@@ -12,7 +12,7 @@ import Glosary from "./mydefinitios.js";
 import Tools from "./mytoolslist.js";
 import Contact from "./mycontact.js";
 import About from "./about.js";
-import Footer from "./myfooter.js";
+import Bluebar from "./myfooter.js";
 import "./index.css";
 
 
@@ -113,7 +113,7 @@ function App() {
             <Route path="/about"> <About sendlanguage={language}/></Route >
         </Switch>
 
-        <Footer />
+        <Bluebar />
         </Router>
     )
 }

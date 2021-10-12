@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Facebook, Linkedin, Twitter, Youtube, Instagram } from 'react-bootstrap-icons';
 import "./myfooter.css";
 
-function Footer () {
+function Bluebar () {
     return (
         <div className={"main-footer"}>
             <Container>
@@ -33,4 +33,4 @@ function Footer () {
     )
 }
 
-export default Footer;
+export default Bluebar;
