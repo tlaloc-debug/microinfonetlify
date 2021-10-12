@@ -1,0 +1,36 @@
+td > button {
+    background-color: #6cc24a;
+    border: none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+td > label {
+    text-align: center;
+    height: 25px;
+}
+
+td > select {
+    background-color: #6cc24a;
+    color: #FFFFFF;
+   
+}
+
+.first-pic {
+    text-align: right;
+}
+
+.middle {
+    text-align: center;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+th:hover {
+    background-color: gray;
+}
+
+@media only screen and (max-width: 991px) {
+   
+}
+
