@@ -10,6 +10,7 @@ import Home from "./home.js";
 import Find from "./search.js";
 import Glosary from "./mydefinitios.js";
 import Tools from "./mytoolslist.js";
+import Contact from "./mycontact.js";
 import "./index.css";
 
 
@@ -113,6 +114,7 @@ function App() {
             <Route path="/search_product"> <Find sendlanguage={language}/></Route >
             <Route path="/show_description"> <Glosary sendlanguage={language}/></Route >
             <Route path="/tools"> <Tools sendlanguage={language}/></Route >
+            <Route path="/contact"> <Contact sendlanguage={language}/></Route >
         </Switch>
 
        
