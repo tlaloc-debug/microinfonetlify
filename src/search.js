@@ -30,7 +30,7 @@ function Find(props){
             if (response1.data==="done"){
                 axios.get("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/searchpic").then((response2)=>{
                         setList(response2.data);
-                        document.getElementById("gotoresults").click();
+                        
                     }) 
             }})
         }
@@ -53,7 +53,7 @@ function Find(props){
             if (response1.data==="done"){
                 axios.get("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/advancesearch").then((response2)=>{
                         setList(response2.data);
-                        document.getElementById("gotoresults").click();
+                        
                     }) 
             }})
         }
@@ -65,19 +65,19 @@ function Find(props){
             if (response1.data==="done"){
                 axios.get("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/searchfamily").then((response2)=>{
                         setList(response2.data);
-                        document.getElementById("gotoresults").click();
+                        
                     }) 
             }})
         }
 
     const goToTop = () => {
-        document.getElementById("makenewsearch").click();
+        
     }
 
     return (
         <div>
             <Container>
-                <a href="#results" id="gotoresults" style={{display: "none"}}></a>
+                
                 <Row xs="1" sm="4" className={"searchname"} id="start-search">
                     <Col className={"search-picture"}>
                         <div className={"search-picture-animation"}>
@@ -261,7 +261,7 @@ function Find(props){
                     })}
                     
                 </Row>
-                <a href="#start-search" id="makenewsearch" style={{display: "none"}}></a>
+                
             </Container>
             
             
