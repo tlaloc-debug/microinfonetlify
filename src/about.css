@@ -1,0 +1,24 @@
+.myphoto {
+    background-image: url("./images/adult.jpg");
+    width: 200px;
+    height: 160px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.main-container {
+    width: 50%;
+}
+
+.text {
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 991px) {
+
+    .main-container {
+        width: 90%;
+    }
+    
+}
