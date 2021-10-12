@@ -9,12 +9,23 @@ function Navigation (props){
     return (
      <div>
         <Container style={{padding: "20px"}} >
-            <Row xs="2" sm="2" className={"row justify-content-between"}>
-                <Col id="logo-title"> 
-                    <div className={"logo"}></div> 
-                    <div className={"name"}>MicroInfo</div>
+            <Row xs="3" sm="12" className={"row justify-content-between"}>
+                <Col xs="12" sm="3"> 
+                    <div style={{display: "flex", justifyContent: "space-between"}}>
+                        <div>
+                            <div className={"logo"}></div> 
+                            <div className={"name"}>MicroInfo</div>
+                        </div>
+                        <select className={"language_select_mobil"}
+                            value={props.language}
+                            onChange={e => props.handleSetLanguage(e.target.value)}>
+                            <option value="en">English</option>
+                            <option value="fr">French</option>
+                            <option value="sp">Spanish</option>
+                        </select>
+                    </div>
                 </Col>
-                <Col style={{textAlign: "right"}} xs="12">
+                <Col  xs="12" sm="6">
                     
                     <div className={"desktop_menu"} >
                         <ul id="navigation">
@@ -36,30 +47,18 @@ function Navigation (props){
                             <li><Link to="/about" style={{color: "black"}}>
                                     About
                                 </Link ></li>
-                            <li>
-                                <select className={"changeLanguageDesktop"}  
-                                    value={props.language}
-                                    onChange={e => props.handleSetLanguage(e.target.value)}>
-                                    <option value="en">English</option>
-                                    <option value="fr">French</option>
-                                    <option value="sp">Spanish</option>
-                                </select>
-                            </li>
                         </ul>
                     </div>  
 
-                    <div className={"mobile_menu"}></div>
-
-                    <div id="changeLanguage">
-                        <select 
-                            value={props.language}
-                            onChange={e => props.handleSetLanguage(e.target.value)}>
-                            <option value="en">English</option>
-                            <option value="fr">French</option>
-                            <option value="sp">Spanish</option>
-                        </select>
-                    </div>
-
+                </Col>
+                <Col xs="12" sm="1"> 
+                    <select className={"language_select_desktop"}
+                        value={props.language}
+                        onChange={e => props.handleSetLanguage(e.target.value)}>
+                        <option value="en">English</option>
+                        <option value="fr">French</option>
+                        <option value="sp">Spanish</option>
+                    </select>
                 </Col>
             </Row>
         </Container>     

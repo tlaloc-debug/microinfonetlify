@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import "./mycontact.css";
 import axios from "axios";
-
+import Emailanimation from "./email-animation.js";
 
 function Contact(props){
 
@@ -40,7 +40,7 @@ function Contact(props){
                     </Col>
                     <Col sm="4" > 
                         <div style={{width: "300px"}}>
-                            
+                            <Emailanimation />
                         </div>
                     </Col>
                 </Row >

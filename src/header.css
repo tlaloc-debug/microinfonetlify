@@ -20,13 +20,7 @@
 #navigation > li {
     text-decoration: none;
     display: inline-block;
-    margin: 0px 10px;
-    font-weight: bold;
-}
-
-.mobile_menu > li {
-    text-decoration: none;
-    display: inline-block;
+    margin: 0px 30px;
     font-weight: bold;
 }
 
@@ -39,29 +33,17 @@ select {
     font-weight: bold;
 }
 
-.mobile_menu {display: none;}
+.desktop_menu {margin-top: 10px;}
+.language_select_mobil {display: none;}
 
-.desktop_menu {display: block;}
-
-#changeLanguage {
-    width: 100%;
-    text-align: center;
-    display: none;
+.language_select_desktop {
+    padding-top: 10px;
 }
-
 
 @media only screen and (max-width: 991px) {
 
-    .desktop_menu {display: none;}
-    
-    .mobile_menu {display: block;}
-
-    #logo-title {position: absolute;}
-
-    .name {top: 0;}
-
-    .changeLanguageDesktop {display: none;}
-
-    .allCharts {display: none;}
-
+    .name {top: 20px;}
+    #navigation > li {margin: 0px 10px}
+    .language_select_mobil {display: block;}
+    .language_select_desktop {display: none}
 }
