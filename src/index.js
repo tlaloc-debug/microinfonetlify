@@ -110,6 +110,7 @@ function App() {
         <Switch>
             <Route exact path="/"><Home sendlanguage={language}/></Route >
             <Route path="/search_product"> <Find sendlanguage={language}/></Route >
+            <Route path="/show_description"> <Glosary sendlanguage={language}/></Route >
         </Switch>
 
        
