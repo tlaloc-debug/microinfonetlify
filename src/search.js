@@ -3,9 +3,7 @@ import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import "./search.css";
-import Glassanimation from "./glass-animation.js";
-import Diagramanimation from "./diagram-animation.js";
-import Picsanimation from "./pics-animation.js";
+
 
 
 function Find(props){
@@ -83,7 +81,7 @@ function Find(props){
                 <Row xs="1" sm="4" className={"searchname"} id="start-search">
                     <Col className={"search-picture"}>
                         <div className={"search-picture-animation"}>
-                            <Glassanimation />
+                           
                             
                         </div>
                     </Col>
@@ -120,7 +118,7 @@ function Find(props){
                 <Row xs="1" sm="4" className={"searchname"}>
                     <Col className={"search-picture"}>
                         <div style={{borderRight: "solid 2px gray", height: "250px"}}>
-                            <Diagramanimation />
+                            
                         </div>
                     </Col>
 
@@ -157,7 +155,7 @@ function Find(props){
                 <Row xs="1" sm="4" className={"searchname"}>
                     <Col className={"search-picture"}>
                         <div style={{borderRight: "solid 2px gray", height: "250px"}}>
-                            <Picsanimation />
+                            
                         </div>
                     </Col>
 
