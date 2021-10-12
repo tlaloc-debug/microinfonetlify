@@ -7,6 +7,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Search, JournalCheck, Files } from 'react-bootstrap-icons';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Home from "./home.js";
+import Find from "./search.js";
 import "./index.css";
 
 
@@ -107,6 +108,7 @@ function App() {
 
         <Switch>
             <Route exact path="/"><Home sendlanguage={language}/></Route >
+            <Route path="/search_product"> <Find sendlanguage={language}/></Route >
         </Switch>
 
        
