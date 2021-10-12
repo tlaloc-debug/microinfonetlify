@@ -12,7 +12,7 @@ import Glosary from "./mydefinitios.js";
 import Tools from "./mytoolslist.js";
 import Contact from "./mycontact.js";
 import About from "./about.js";
-import Footer from "./footer.js";
+import Footer from "./myfooter.js";
 import "./index.css";
 
 

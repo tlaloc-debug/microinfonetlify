@@ -2,7 +2,7 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Facebook, Linkedin, Twitter, Youtube, Instagram } from 'react-bootstrap-icons';
-import "./footer.css";
+import "./myfooter.css";
 
 function Footer () {
     return (
