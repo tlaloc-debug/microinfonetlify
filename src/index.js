@@ -13,7 +13,7 @@ import Tools from "./mytoolslist.js";
 import Contact from "./mycontact.js";
 import About from "./about.js";
 import Bluebar from "./myfooter.js";
-import Compare from "./mycomparation.js";
+import Piclistcompare from "./mycomparation.js";
 import "./index.css";
 
 
@@ -112,7 +112,7 @@ function App() {
             <Route path="/tools"> <Tools sendlanguage={language}/></Route >
             <Route path="/contact"> <Contact sendlanguage={language}/></Route >
             <Route path="/about"> <About sendlanguage={language}/></Route >
-            <Route path="/compare_items"> <Compare sendlanguage={language}/></Route >
+            <Route path="/compare_items"> <Piclistcompare sendlanguage={language}/></Route >
         </Switch>
 
         <Bluebar />

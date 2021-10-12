@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import "./mycomparation.css";
 import PicsCharts from "./mycharts.js";
 
-function Compare(props){
+function Piclistcompare(props){
 
     const [firstpic, setfirstpic] = useState("PIC10F200");
     const [secondpic, setsecondpic]= useState("PIC10F202");
@@ -475,4 +475,4 @@ function Compare(props){
     )
 }
 
-export default Compare;
+export default Piclistcompare;
