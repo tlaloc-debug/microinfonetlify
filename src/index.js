@@ -15,7 +15,7 @@ import About from "./about.js";
 import Bluebar from "./myfooter.js";
 import Piclistcompare from "./mycomparation.js";
 import "./index.css";
-
+import PicsCharts from "./mycharts.js";
 
 function App() {
 
