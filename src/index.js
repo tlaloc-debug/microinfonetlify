@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Home from "./home.js";
 import Find from "./search.js";
 import Glosary from "./mydefinitios.js";
+import Tools from "./mytoolslist.js";
 import "./index.css";
 
 
@@ -111,6 +112,7 @@ function App() {
             <Route exact path="/"><Home sendlanguage={language}/></Route >
             <Route path="/search_product"> <Find sendlanguage={language}/></Route >
             <Route path="/show_description"> <Glosary sendlanguage={language}/></Route >
+            <Route path="/tools"> <Tools sendlanguage={language}/></Route >
         </Switch>
 
        
