@@ -23,7 +23,7 @@ function App() {
     return (
         <Router>
         <div style={{marginBottom: "20px"}}>
-            <Navigation  sendlanguage={language}/>
+            <Navigation  handleSetLanguage={language => {setlanguage(language);}} sendlanguage={language}/>
             <Carousel sendlanguage={language}/>
             <div id={"color-bars"}>
                 <div style={{backgroundColor: "#f68d2e" }}></div>
