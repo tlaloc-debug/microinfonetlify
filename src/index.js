@@ -12,9 +12,8 @@ import Glosary from "./mydefinitios.js";
 import Tools from "./mytoolslist.js";
 import Contact from "./mycontact.js";
 import About from "./about.js";
+import Footer from "./footer.js";
 import "./index.css";
-
-
 
 
 function App() {
@@ -114,7 +113,7 @@ function App() {
             <Route path="/about"> <About sendlanguage={language}/></Route >
         </Switch>
 
-       
+        <Footer />
         </Router>
     )
 }
