@@ -3,6 +3,8 @@ import "./header.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
+import "../node_modules/slicknav/jquery.slicknav"
+import "../node_modules/slicknav/scss/slicknav.scss"
 
 function Navigation (props){
 

@@ -40,4 +40,27 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+
+  <script>
+    
+    $(function(){
+      $("#navigation").slicknav({
+        prependTo: 'body',
+        appendTo: ".mobile_menu",
+        removeIds: false,
+        closeOnClick: true,
+        allowParentLinks: true,
+        nestedParentLinks: false,
+        showChildren: true,
+      afterOpen: function(){
+        document.getElementById("changeLanguage").style.display="block";
+      },
+      beforeClose: function(){
+        document.getElementById("changeLanguage").style.display="none";
+      },
+      });   
+    });
+    
+  </script>
+  
 </html>
