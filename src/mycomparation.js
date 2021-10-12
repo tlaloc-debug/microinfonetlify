@@ -3,6 +3,7 @@ import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import "./mycomparation.css";
+import PicCharts from "./mycharts.js";
 
 
 function Piclistcompare(props){
@@ -465,7 +466,7 @@ function Piclistcompare(props){
                         </Col>
 
                         <Col sm="8" xs="10" className={"allCharts"}>
-                            
+                            <PicCharts mydata={List}/>
                         </Col>
                         
                     </Row>
