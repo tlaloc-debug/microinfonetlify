@@ -8,6 +8,7 @@ import { Search, JournalCheck, Files } from 'react-bootstrap-icons';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Home from "./home.js";
 import Find from "./search.js";
+import Glosary from "./description.js";
 import "./index.css";
 
 
