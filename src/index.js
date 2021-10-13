@@ -15,9 +15,13 @@ import About from "./about.js";
 import Bluebar from "./myfooter.js";
 import Piclistcompare from "./mycomparation.js";
 import "./index.css";
+import AliceCarousel from 'react-alice-carousel';
+import './alice-carousel.css';
+import { useMediaQuery } from 'react-responsive'
 
 function App() {
 
+    const screenwidth = useMediaQuery({query: '(min-width: 1224px)'})
     const [language, setlanguage] = useState("en");
 
     return (
@@ -30,76 +34,79 @@ function App() {
                 <div style={{backgroundColor: "#41b6e6" }}></div>
                 <div style={{backgroundColor: "#6cc24a"  }}></div>
             </div>
-
-
-            <Container >
-            <Row xs="1" sm="3" className={"row justify-content-center"} >
-                <Col sm="4" xs="10">
-                    <Link to="/search_product">
-                        <div id={"search"}>
-                            <div className={"up"} >
-                                <Search size={50}/>
-                            </div>
-                            <div className={"down"} >
-                                <div>
-                                    <span>
-                                        {language === "en" ? "Find " : ""}
-                                        {language === "fr" ? "Trouver " : ""}
-                                        {language === "sp" ? "Buscar " : ""}
-                                    </span> 
-                                    {language === "en" ? "a product" : ""}
-                                    {language === "fr" ? "un produit" : ""}
-                                    {language === "sp" ? "un producto" : ""}
+            
+            
+                <AliceCarousel animationDuration="500" disableDotsControls="true" disableButtonsControls={screenwidth} responsive={{800: {items: 3}}} paddingRight={screenwidth ? 250 : 0} paddingLeft={screenwidth ? 250 : 0}>
+                    <div className={"index_carousel"}>
+                        <div className={"carousel_element"}>
+                            <Link to="/search_product">
+                                <div id={"search"}>
+                                    <div className={"up"} >
+                                        <Search size={50}/>
+                                    </div>
+                                    <div className={"down"} >
+                                        <div>
+                                            <span>
+                                                {language === "en" ? "Find " : ""}
+                                                {language === "fr" ? "Trouver " : ""}
+                                                {language === "sp" ? "Buscar " : ""}
+                                            </span> 
+                                            {language === "en" ? "a product" : ""}
+                                            {language === "fr" ? "un produit" : ""}
+                                            {language === "sp" ? "un producto" : ""}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
-                    </Link>
-                </Col>
-                <Col sm="4" xs="10">
-                    <Link to="/show_description">
-                        <div id={"glosary"}>
-                            <div className={"up"} >
-                                <JournalCheck size={50}/>
-                            </div>
-                            <div className={"down"} >
-                                <div>
-                                    <span>
-                                        {language === "en" ? "List " : ""}
-                                        {language === "fr" ? "Liste " : ""}
-                                        {language === "sp" ? "Lista " : ""}
-                                    </span> 
-                                    {language === "en" ? "of terms" : ""}
-                                    {language === "fr" ? "de termes" : ""}
-                                    {language === "sp" ? "de terminos" : ""}
+                    </div>
+                    <div className={"index_carousel"}>
+                        <div className={"carousel_element"}>
+                            <Link to="/show_description">
+                                <div id={"glosary"}>
+                                    <div className={"up"} >
+                                        <JournalCheck size={50}/>
+                                    </div>
+                                    <div className={"down"} >
+                                        <div>
+                                            <span>
+                                                {language === "en" ? "List " : ""}
+                                                {language === "fr" ? "Liste " : ""}
+                                                {language === "sp" ? "Lista " : ""}
+                                            </span> 
+                                            {language === "en" ? "of terms" : ""}
+                                            {language === "fr" ? "de termes" : ""}
+                                            {language === "sp" ? "de terminos" : ""}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
-                    </Link>
-                </Col>
-                <Col sm="4" xs="10">
-                    <Link to="/compare_items">
-                        <div id={"compare"}>
-                            <div className={"up"} >
-                                <Files size={50}/>
-                            </div>
-                            <div className={"down"} >
-                                <div>
-                                    <span>
-                                        {language === "en" ? "Compare " : ""}
-                                        {language === "fr" ? "Comparer " : ""}
-                                        {language === "sp" ? "Comparar " : ""}
-                                    </span> 
-                                    {language === "en" ? "products" : ""}
-                                    {language === "fr" ? "les produits" : ""}
-                                    {language === "sp" ? "productos" : ""}
+                    </div>
+                    <div className={"index_carousel"}>
+                        <div className={"carousel_element"}>
+                            <Link to="/compare_items">
+                                <div id={"compare"}>
+                                    <div className={"up"} >
+                                        <Files size={50}/>
+                                    </div>
+                                    <div className={"down"} >
+                                        <div>
+                                            <span>
+                                                {language === "en" ? "Compare " : ""}
+                                                {language === "fr" ? "Comparer " : ""}
+                                                {language === "sp" ? "Comparar " : ""}
+                                            </span> 
+                                            {language === "en" ? "products" : ""}
+                                            {language === "fr" ? "les produits" : ""}
+                                            {language === "sp" ? "productos" : ""}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
-                    </Link>
-                </Col>
-                
-             </Row>
-             </Container>
+                    </div>
+                </AliceCarousel>             
             
         </div>
 

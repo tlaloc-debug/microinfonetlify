@@ -30,29 +30,33 @@
     display: flex;
     justify-content: center;
     color: gray;
-    margin: 0px 30px;
-    
+    margin: 0px 25px;
 }
 
 a:link {
     text-decoration: none;
   }
 
+.index_carousel {
+    display: flex;
+    justify-content: center;
+}
+
 #search > .down > div > span {color: #f68d2e;}
 #glosary > .down > div > span {color: #41b6e6;}
 #compare > .down > div > span {color: #6cc24a;}
 
-  @media only screen and (max-width: 991px) {
+.carousel_element {
+    width: 300px;
+}
 
-    #color-bars {
-       display: none;
-    }
- 
-    #search > div:first-of-type, #glosary > div:first-of-type, #compare > div:first-of-type  {
-        display: none;
-    }
+.main_carousel {
+    width: 50%;
+}
 
-    #search > .down {border-bottom: solid #f68d2e;}
-    #glosary > .down {border-bottom: solid #41b6e6;}
-    #compare > .down {border-bottom: solid #6cc24a;}
+@media only screen and (max-width: 991px) {
+    
+    #search > div, #glosary > div, #compare > div {
+        margin: 0px 40px;
+    }
 }

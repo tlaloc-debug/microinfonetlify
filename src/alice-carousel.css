@@ -68,18 +68,24 @@
 
 .alice-carousel__prev-btn,
 .alice-carousel__next-btn {
+  position: absolute;
   display: inline-block;
   box-sizing: border-box;
-  width: 50%;
+  width: 15%;
   padding: 10px 5px; }
   .alice-carousel__prev-btn [data-area]::after,
   .alice-carousel__next-btn [data-area]::after {
-    position: relative;
     content: attr(data-area);
     text-transform: capitalize; }
 
 .alice-carousel__prev-btn {
-  text-align: right; }
+  text-align: right; 
+  top: 20%;
+  font-size: 2em;}
+.alice-carousel__next-btn {
+  top: 20%;
+  right: 0px;
+  font-size: 2em;}
 
 .alice-carousel__prev-btn-item,
 .alice-carousel__next-btn-item {

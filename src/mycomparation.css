@@ -30,7 +30,9 @@ th:hover {
     background-color: gray;
 }
 
+
 @media only screen and (max-width: 991px) {
-   
+    
+    .allCharts {display: none;}
 }
 
