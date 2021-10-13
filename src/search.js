@@ -78,7 +78,7 @@ function Find(props){
     return (
         <div>
             <Container>
-                <a href="#results" id="gotoresults" ></a>
+                <a href="#results" id="gotoresults" >link</a>
                 <Row xs="1" sm="4" className={"searchname"} id="start-search">
                     <Col className={"search-picture"}>
                         <div className={"search-picture-animation"}>
@@ -261,7 +261,7 @@ function Find(props){
                     })}
                     
                 </Row>
-                <a href="#start-search" id="makenewsearch" ></a>
+                <a href="#start-search" id="makenewsearch" >link</a>
             </Container>
             
             
