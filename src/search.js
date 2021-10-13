@@ -6,8 +6,12 @@ import "./search.css";
 import Glassanimation from "./glass-animation.js";
 import Diagramanimation from "./diagram-animation.js";
 import Picsanimation from "./pics-animation.js";
+import * as Scroll from 'react-scroll';
 
 function Find(props){
+
+    const scroller = Scroll.scroller;
+    const Element  = Scroll.Element;
 
     const [picSearch, setpicSearch] = useState("");
     const [List, setList]= useState([]);
@@ -31,7 +35,10 @@ function Find(props){
             if (response1.data==="done"){
                 axios.get("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/searchpic").then((response2)=>{
                         setList(response2.data);
-                        document.getElementById("gotoresults").click();
+                        scroller.scrollTo("results", {
+                            duration: 600,
+                            smooth: true,
+                          });
                     }) 
             }})
         }
@@ -54,7 +61,10 @@ function Find(props){
             if (response1.data==="done"){
                 axios.get("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/advancesearch").then((response2)=>{
                         setList(response2.data);
-                        document.getElementById("gotoresults").click();
+                        scroller.scrollTo("results", {
+                            duration: 600,
+                            smooth: true,
+                          });
                     }) 
             }})
         }
@@ -66,20 +76,26 @@ function Find(props){
             if (response1.data==="done"){
                 axios.get("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/searchfamily").then((response2)=>{
                         setList(response2.data);
-                        document.getElementById("gotoresults").click();
+                        scroller.scrollTo("results", {
+                            duration: 600,
+                            smooth: true,
+                          });
                     }) 
             }})
         }
 
-    const goToTop = () => {
-        document.getElementById("makenewsearch").click();
-    }
+    const scrollToSearch = () =>  {
+        scroller.scrollTo("startSearch", {
+            duration: 600,
+            smooth: true,
+          })
+        }
 
     return (
         <div>
             <Container>
-                <a href="#results" id="gotoresults" >link</a>
-                <Row xs="1" sm="4" className={"searchname"} id="start-search">
+                <Element name="startSearch"></Element>
+                <Row xs="1" sm="4" className={"searchname"} >
                     <Col className={"search-picture"}>
                         <div className={"search-picture-animation"}>
                             <Glassanimation />
@@ -210,8 +226,8 @@ function Find(props){
                     </Col> 
                     
                 </Row>
-                
-                <Row xs="1" sm="4" id="results">
+                <Element name="results"></Element>
+                <Row xs="1" sm="4">
                     {List.map((items) => {
                         return (
                             <Col>
@@ -250,7 +266,7 @@ function Find(props){
                                     <label htmlFor="">packages: </label>
                                     <div style={{width: "100%"}}>{items.box}</div>
                                 </div>
-                                <div style={{width: "100%", textAlign: "center", margin: "5px 0px", color: "#0645AD", cursor: "pointer"}} onClick={goToTop}>
+                                <div style={{width: "100%", textAlign: "center", margin: "5px 0px", color: "#0645AD", cursor: "pointer"}} onClick={scrollToSearch}>
                                     {props.sendlanguage === "en" ? "Back ↑" : ""}
                                     {props.sendlanguage === "fr" ? "retourner ↑" : ""}
                                     {props.sendlanguage === "sp" ? "Regresar ↑" : ""}
@@ -261,7 +277,6 @@ function Find(props){
                     })}
                     
                 </Row>
-                <a href="#start-search" id="makenewsearch" >link</a>
             </Container>
             
             
