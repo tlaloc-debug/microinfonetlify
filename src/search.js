@@ -35,6 +35,7 @@ function Find(props){
             if (response1.data==="done"){
                 axios.get("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/searchpic").then((response2)=>{
                         setList(response2.data);
+                        console.log(response2.data)
                         scroller.scrollTo("results", {
                             duration: 600,
                             smooth: true,
@@ -90,6 +91,69 @@ function Find(props){
             smooth: true,
           })
         }
+
+    const memoryChange = (mymemory) => {
+        if (isNaN(Number(mymemory))) {
+            document.getElementById("memoryinput").style.color="red";
+        } else {
+            document.getElementById("memoryinput").style.color="black";
+            setmemory(mymemory)
+        }
+    }
+
+    const eepromChange = (myeeprom) => {
+        if (isNaN(Number(myeeprom))) {
+            document.getElementById("eeprominput").style.color="red";
+        } else {
+            document.getElementById("eeprominput").style.color="black";
+            seteeprom(myeeprom)
+        }
+    }
+
+    const ramChange = (myram) => {
+        if (isNaN(Number(myram))) {
+            document.getElementById("raminput").style.color="red";
+        } else {
+            document.getElementById("raminput").style.color="black";
+            setram(myram)
+        }
+    }
+
+    const pinsChange = (mypins) => {
+        if (isNaN(Number(mypins))) {
+            document.getElementById("pinsinput").style.color="red";
+        } else {
+            document.getElementById("pinsinput").style.color="black";
+            setpins(mypins)
+        }
+    }
+
+    const chanelsChange = (mychanels) => {
+        if (isNaN(Number(mychanels))) {
+            document.getElementById("chanelsinput").style.color="red";
+        } else {
+            document.getElementById("chanelsinput").style.color="black";
+            setchanels(mychanels)
+        }
+    }
+
+    const resolutionChange = (myresolution) => {
+        if (isNaN(Number(myresolution))) {
+            document.getElementById("resolutioninput").style.color="red";
+        } else {
+            document.getElementById("resolutioninput").style.color="black";
+            setresolution(myresolution)
+        }
+    }
+
+    const speedChange = (myspeed) => {
+        if (isNaN(Number(myspeed))) {
+            document.getElementById("speedinput").style.color="red";
+        } else {
+            document.getElementById("speedinput").style.color="black";
+            setmaxspeed(myspeed)
+        }
+    }
 
     return (
         <div>
@@ -192,29 +256,29 @@ function Find(props){
 
                     <Col sm="6">
                         <div style={{marginTop: "20px"}} id="advance-section">
-                            <label htmlFor="">memory</label>
-                            <input  type="text" onChange={(ev)=>{setmemory(ev.target.value)}} /> 
-                            <label htmlFor="">eeprom</label>
-                            <input  type="text" onChange={(ev)=>{seteeprom(ev.target.value)}} /><br />
-                            <label htmlFor="">ram</label>
-                            <input  type="text" onChange={(ev)=>{setram(ev.target.value)}} />
-                            <label htmlFor="">pins</label>
-                            <input  type="text" onChange={(ev)=>{setpins(ev.target.value)}} /><br />
-                            <label htmlFor="">chanels</label>
-                            <input  type="text" onChange={(ev)=>{setchanels(ev.target.value)}} />
-                            <label htmlFor="">resolution</label>
-                            <input  type="text" onChange={(ev)=>{setresolution(ev.target.value)}} /><br />
-                            <label htmlFor="">max speed</label>
-                            <input  type="text" onChange={(ev)=>{setmaxspeed(ev.target.value)}} /><br />
+                            <label >memory</label>
+                            <input id={"memoryinput"} type="text" placeholder={"bits"} onChange={(ev)=>{memoryChange(ev.target.value)}} /> 
+                            <label >eeprom</label>
+                            <input id={"eeprominput"} type="text" placeholder={"bits"} onChange={(ev)=>{eepromChange(ev.target.value)}} /><br />
+                            <label >ram</label>
+                            <input id={"raminput"} type="text" placeholder={"bits"} onChange={(ev)=>{ramChange(ev.target.value)}} />
+                            <label >pins</label>
+                            <input id={"pinsinput"} type="text" placeholder={"quantity"} onChange={(ev)=>{pinsChange(ev.target.value)}} /><br />
+                            <label >chanels</label>
+                            <input id={"chanelsinput"} type="text" placeholder={"quantity"} onChange={(ev)=>{chanelsChange(ev.target.value)}} />
+                            <label >resolution</label>
+                            <input id={"resolutioninput"} type="text" placeholder={"bits"} onChange={(ev)=>{resolutionChange(ev.target.value)}} /><br />
+                            <label >max speed</label>
+                            <input id={"speedinput"} type="text" placeholder={"MHz"} onChange={(ev)=>{speedChange(ev.target.value)}} /><br />
                             
                             <input  type="checkbox" onChange={(ev)=>{settimer8(!timer8)}} />
-                            <label htmlFor="">timer8</label>
+                            <label >timer8</label>
                             <input  type="checkbox" onChange={(ev)=>{settimer16(!timer16)}} />
-                            <label htmlFor="">timer16</label><br />
+                            <label >timer16</label><br />
                             <input  type="checkbox" onChange={(ev)=>{setserial(!serial)}} />
-                            <label htmlFor="">Serial</label>
+                            <label >Serial</label>
                             <input  type="checkbox" onChange={(ev)=>{setintosc(!intosc)}} />
-                            <label htmlFor="">IntOSC</label><br />
+                            <label >IntOSC</label><br />
                         </div>
                        
                         <button onClick={advanceSearch} >
@@ -227,43 +291,48 @@ function Find(props){
                     
                 </Row>
                 <Element name="results"></Element>
+                <div style={{width: "100%", textAlign: "center", padding: "20px 0px", fontSize: "1.2em", fontWeight: "bold"}}>{List.length} 
+                    {props.sendlanguage === "en" ? " Results" : ""}
+                    {props.sendlanguage === "fr" ? " Résultats" : ""}
+                    {props.sendlanguage === "sp" ? " Resultados" : ""}  
+                </div> 
                 <Row xs="1" sm="4">
                     {List.map((items) => {
                         return (
                             <Col>
                                 <div className={"result-box"}>
                                     <div style={{width: "100%", textAlign: "center", textDecoration: "underline"}}>{items.product}</div><br /><br />
-                                    <label htmlFor="">memory: </label>
+                                    <label >memory: </label>
                                     <div >{items.progmemory}</div><br />
-                                    <label htmlFor="">memtype: </label>
+                                    <label >memtype: </label>
                                     <div >{items.memtype}</div><br />
-                                    <label htmlFor="">eeprom: </label>
+                                    <label >eeprom: </label>
                                     <div >{items.eeprom}</div><br />
-                                    <label htmlFor="">ram: </label>
+                                    <label >ram: </label>
                                     <div >{items.ram}</div><br />
-                                    <label htmlFor="">pins: </label>
+                                    <label >pins: </label>
                                     <div >{items.pins}</div><br />
-                                    <label htmlFor="">line: </label>
+                                    <label >line: </label>
                                     <div >{items.line}</div><br />
-                                    <label htmlFor=""> adc: </label>
+                                    <label > adc: </label>
                                     <div >{items.adc}</div><br />
-                                    <label htmlFor="">res: </label>
+                                    <label >res: </label>
                                     <div >{items.res}</div><br />
-                                    <label htmlFor="">comp: </label>
+                                    <label >comp: </label>
                                     <div >{items.comp}</div><br />
-                                    <label htmlFor="">timer 16:</label>
+                                    <label >timer 16:</label>
                                     <div >{items.timer16}</div><br />
-                                    <label htmlFor="">timer 8:</label>
+                                    <label >timer 8:</label>
                                     <div >{items.timer8}</div><br />
-                                    <label htmlFor="">model: </label>
+                                    <label >model: </label>
                                     <div >{items.label}</div><br />
-                                    <label htmlFor="">speed: </label>
+                                    <label >speed: </label>
                                     <div >{items.max}</div><br />
-                                    <label htmlFor="">osc: </label>
+                                    <label >osc: </label>
                                     <div >{items.intosc}</div><br />
-                                    <label htmlFor="">serial: </label><br />
+                                    <label >serial: </label><br />
                                     <div style={{width: "100%"}}>{items.serial}</div><br />
-                                    <label htmlFor="">packages: </label>
+                                    <label >packages: </label>
                                     <div style={{width: "100%"}}>{items.box}</div>
                                 </div>
                                 <div style={{width: "100%", textAlign: "center", margin: "5px 0px", color: "#0645AD", cursor: "pointer"}} onClick={scrollToSearch}>
