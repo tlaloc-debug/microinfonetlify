@@ -11,36 +11,36 @@ function About(props){
                         <div className={"myphoto"}></div>
                     </div>
                     <div className={"text"}>
-                        {props.sendlanguage === "en" ? "Hello, my name is Erick Diaz." : ""}
-                        {props.sendlanguage === "fr" ? "Bonjour, je m'appelle Erick Diaz." : ""}
-                        {props.sendlanguage === "sp" ? "Hola, mi nombre es Erick Diaz." : ""}
+                        {props.sendlanguage === "en" ? "Hello, my name is John Doe." : ""}
+                        {props.sendlanguage === "fr" ? "Bonjour, je m'appelle John Doe." : ""}
+                        {props.sendlanguage === "sp" ? "Hola, mi nombre es John Doe." : ""}
                         
                     </div><br />
                     <div className={"text"}>
-                        {props.sendlanguage === "en" ? "I am a Full-Stack Web Developer, canadian resident and currently living in Laval, Quebec. " : ""}
-                        {props.sendlanguage === "fr" ? "Je suis un développeur Web Full-Stack, résident canadien et actuellement j'habite  à Laval, Québec. " : ""}
-                        {props.sendlanguage === "sp" ? "Soy un desarrollador Web Full-Stack, residente canadiense y actualmente resido en Laval, Quebec." : ""}
+                        {props.sendlanguage === "en" ? "I'm an electronic engineer who has a deep passion for programming and circuits design using microcontrollers." : ""}
+                        {props.sendlanguage === "fr" ? "Je suis un ingénieur en électronique passionné par la programmation et la conception de circuits à l'aide de microcontrôleurs." : ""}
+                        {props.sendlanguage === "sp" ? "I'm an electronic engineer who has a deep passion for programming and circuits design using microcontrollers." : ""}
                     </div><br />
                     <div className={"text"}>
-                        {props.sendlanguage === "en" ? "My career as a developer begins in Mexico, where I finished my Mechatronics engineering to later embark on the world of work. " : ""}
-                        {props.sendlanguage === "fr" ? "Ma carrière de développeur commence au Mexique, où j'ai terminé mon baccalaureat en genie mecanique pour me lancer plus tard dans le monde du travail. " : ""}
-                        {props.sendlanguage === "sp" ? "Mi trayectoria como desarrollador comienza en Mexico, en donde terminé mi ingenieria Mecatronica para despues embarcarme en el mundo laboral." : ""}
+                        {props.sendlanguage === "en" ? "My career as programmer starts at university where i had the change to learn what a microcontroller can do amd how to use them." : ""}
+                        {props.sendlanguage === "fr" ? "Ma carrière de programmeur a commencé à l'université où j'ai eu la chance d'apprendre ce qu'un microcontrôleur peut faire et comment les utiliser." : ""}
+                        {props.sendlanguage === "sp" ? "Mi carrera como programador comienza en la universidad, donde tuve el cambio para aprender qué puede hacer un microcontrolador y cómo usarlo." : ""}
                     </div><br />
                     <div className={"text"}>
-                        {props.sendlanguage === "en" ? "After two years of working in this field, I decided to emigrate to Canada, where I had the opportunity to do a DEP in welding and currently I have more than three years of experience in this field. " : ""}
-                        {props.sendlanguage === "fr" ? "Après deux ans de travail dans ce domaine, j'ai décidé d'émigrer au Canada, où j'ai eu l'opportunité de faire un DEP en soudure et actuellement j'ai plus de trois ans d'expérience dans ce domaine. " : ""}
-                        {props.sendlanguage === "sp" ? "Despues de dos anos de trabajar en este dominio, decidí emigrara a Canada, en donde tuve la oportubidad de hacer un DEP en soldadura y actualmente cuento con mas de tres anos de experiencia en este campo." : ""}   
+                        {props.sendlanguage === "en" ? "After finishing my studies I started to work for a small company developing all kind of circuits and thanks to all this hard work I ended up having a really strong knowledge about all that is related to microcontrollers." : ""}
+                        {props.sendlanguage === "fr" ? "Après avoir terminé mes études, j'ai commencé à travailler pour une petite entreprise développant toutes sortes de circuits et grâce à tout ce travail acharné, j'ai fini par avoir une très bonne connaissance de tout ce qui est lié aux microcontrôleurs." : ""}
+                        {props.sendlanguage === "sp" ? "Después de terminar mis estudios comencé a trabajar para una pequeña empresa desarrollando todo tipo de circuitos y gracias a todo este arduo trabajo terminé teniendo un conocimiento muy fuerte sobre todo lo relacionado con los microcontroladores." : ""}   
                     </div><br />
                     <div className={"text"}>
-                        {props.sendlanguage === "en" ? "During this time I have learned on my own different development languages such as HTML, CSS, JavaScript for the Front-End and PHP, NodeJS, Python for the Back-End. " : ""}
-                        {props.sendlanguage === "fr" ? "Pendant ce temps j'ai appris par moi-même différents langages de développement tels que HTML, CSS, JavaScript pour le Front-End et PHP, NodeJS, Python pour le Back-End. " : ""}
-                        {props.sendlanguage === "sp" ? "Durante este tiempo he aprendido por mi cuenta distintos lenguajes de desarrollo como HTML, CSS, JavaScript para el Front-End y PHP, NodeJS, Python para el Back-End." : ""}
+                        {props.sendlanguage === "en" ? "My curiosity for programming lead me to create this site where I want to show all my expertise hoping that all this information may help the people who is starting in this beautiful world." : ""}
+                        {props.sendlanguage === "fr" ? "Ma curiosité pour la programmation m'a amené à créer ce site où je souhaite montrer toute mon expertise en espérant que toutes ces informations puissent aider les personnes qui débutent dans ce beau monde." : ""}
+                        {props.sendlanguage === "sp" ? "Mi curiosidad por la programación me llevó a crear este sitio donde quiero mostrar toda mi experiencia esperando que toda esta información pueda ayudar a las personas que se están iniciando en este hermoso mundo." : ""}
                         
                     </div><br />
                     <div className={"text"}>
-                        {props.sendlanguage === "en" ? "As well as the operation of different frameworks such as React and Django. " : ""}
-                        {props.sendlanguage === "fr" ? "Ainsi que le fonctionnement de différents frameworks tels que React et Django. " : ""}
-                        {props.sendlanguage === "sp" ? "Asi como el funcionamiento de distintos frameworks como React y Django." : ""}
+                        {props.sendlanguage === "en" ? "If you have any question or need help with a project fell free to contact me through the Contact section." : ""}
+                        {props.sendlanguage === "fr" ? "Si vous avez des questions ou avez besoin d'aide pour un projet, n'hésitez pas à me contacter via la section Contact." : ""}
+                        {props.sendlanguage === "sp" ? "Si tienes alguna pregunta o necesitas ayuda con un proyecto, no dudes en ponerte en contacto conmigo a través de la sección Contacto." : ""}
                     </div><br />
                 </div>
             </div>    
