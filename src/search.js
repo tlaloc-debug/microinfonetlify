@@ -30,10 +30,10 @@ function Find(props){
     const [intosc, setintosc] = useState(false);
 
     const searchPic = () => {
-        axios.post("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/searchpicname", {picName: picSearch}).then((response1)=>{
+        axios.post("https://all-in-one-proxy-3187fcbdcf4f.herokuapp.com/https://connectto-cdf4284ddfed.herokuapp.com/searchpicname", {picName: picSearch}).then((response1)=>{
             
             if (response1.data==="done"){
-                axios.get("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/searchpic").then((response2)=>{
+                axios.get("https://all-in-one-proxy-3187fcbdcf4f.herokuapp.com/https://connectto-cdf4284ddfed.herokuapp.com/searchpic").then((response2)=>{
                         setList(response2.data);
                         console.log(response2.data)
                         scroller.scrollTo("results", {
