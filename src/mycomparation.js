@@ -19,10 +19,10 @@ function Piclistcompare(props){
             if (language === "fr") alert ("On dirait que vous voulez comparer un PIC à lui-même. \nEssayez de sélectionner deux PIC différents. ")
             if (language === "sp") alert ("Parece que quieres comparar un PIC consigo mismo. \nTrata de seleccionar dos PICs diferentes. ")
         } else {
-        axios.post("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/comparepicname", {FirstpicName: firstpic, SecondpicName: secondpic}).then((response1)=>{
+        axios.post("https://all-in-one-proxy-3187fcbdcf4f.herokuapp.com/https://connectto-cdf4284ddfed.herokuapp.com/comparepicname", {FirstpicName: firstpic, SecondpicName: secondpic}).then((response1)=>{
             
             if (response1.data==="done"){
-                axios.get("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/comparepic").then((response2)=>{
+                axios.get("https://all-in-one-proxy-3187fcbdcf4f.herokuapp.com/https://connectto-cdf4284ddfed.herokuapp.com/comparepic").then((response2)=>{
                         setList(response2.data);
                         
                     }) 

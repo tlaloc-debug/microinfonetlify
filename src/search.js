@@ -45,7 +45,7 @@ function Find(props){
         }
 
     const advanceSearch = () => {
-        axios.post("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/advancesearchname", {
+        axios.post("https://all-in-one-proxy-3187fcbdcf4f.herokuapp.com/https://connectto-cdf4284ddfed.herokuapp.com/advancesearchname", {
                         picMemory: memory,
                         picEeprom: eeprom,
                         picRam: ram,
@@ -60,7 +60,7 @@ function Find(props){
                     }).then((response1)=>{
             
             if (response1.data==="done"){
-                axios.get("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/advancesearch").then((response2)=>{
+                axios.get("https://all-in-one-proxy-3187fcbdcf4f.herokuapp.com/https://connectto-cdf4284ddfed.herokuapp.com/advancesearch").then((response2)=>{
                         setList(response2.data);
                         scroller.scrollTo("results", {
                             duration: 600,
@@ -72,10 +72,10 @@ function Find(props){
     
     const searchFamily = (familydata) => {
         
-        axios.post("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/searchfamilyname", {picFamily: familydata}).then((response1)=>{
+        axios.post("https://all-in-one-proxy-3187fcbdcf4f.herokuapp.com/https://connectto-cdf4284ddfed.herokuapp.com/searchfamilyname", {picFamily: familydata}).then((response1)=>{
             
             if (response1.data==="done"){
-                axios.get("https://all-in-one-proxy.herokuapp.com/https://connectto.herokuapp.com/searchfamily").then((response2)=>{
+                axios.get("https://all-in-one-proxy-3187fcbdcf4f.herokuapp.com/https://connectto-cdf4284ddfed.herokuapp.com/searchfamily").then((response2)=>{
                         setList(response2.data);
                         scroller.scrollTo("results", {
                             duration: 600,
